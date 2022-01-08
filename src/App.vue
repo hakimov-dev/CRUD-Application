@@ -52,6 +52,10 @@ export default {
         }
       })
       this.user = result
+      },
+
+      remove(id){
+
       }
   }
 }
