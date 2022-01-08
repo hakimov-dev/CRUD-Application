@@ -1,12 +1,12 @@
 <template>
       <div v-if="user.length !== 0">
       <div 
-      class="card" 
+      class="card flex" 
       v-for="person in user" 
       :key="person.id"
       >
       <h3>{{person.firstName}}</h3>
-      <button class="btn danger">Delete</button>
+      <button class="btn danger" @click="$emit('remove')">Delete</button>
       </div>
       </div>
 
@@ -25,7 +25,7 @@ export default {
   props:[ 
       'user'
       ],
-  emits:['loadUser']
+  emits:['loadUser', 'remove']
 }
 </script>
 
