@@ -7,7 +7,7 @@
      <input type="text" id="name" placeholder="Your name" v-model.trim="name">
    </div>
 
-   <button :disabled="name.length === 0" class="btn">Create user</button>
+   <button :disabled="name.length === 0" class="btn" @click="createUser">Create user</button>
   </form>
   <user-list :user="user" @loadUser="loadUser" @remove="remove"/>
 </div>
