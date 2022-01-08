@@ -1,4 +1,4 @@
-# vue-practice
+# vue-crudd-app
 
 ## Project setup
 ```
