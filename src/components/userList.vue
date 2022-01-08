@@ -28,3 +28,12 @@ export default {
   emits:['loadUser']
 }
 </script>
+
+<style scoped>
+
+.flex{
+ display:flex;
+ align-items:center;
+ justify-content: space-between;    
+}
+</style>
