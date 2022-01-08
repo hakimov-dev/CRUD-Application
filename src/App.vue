@@ -55,7 +55,8 @@ export default {
       },
 
      async remove(id){
-       await axios.delete(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/${id}.json`)
+       await axios.delete(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/${id}.json`)
+       this.user = this.user.filter(person => person.id !== id)
       }
   }
 }
