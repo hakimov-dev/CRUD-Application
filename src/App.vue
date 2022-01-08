@@ -15,7 +15,7 @@
 
 <script>
 import userList from '@/components/userList.vue'
-import axios from 'vue'
+import axios from 'axios'
 
 export default {
   name: 'App',
