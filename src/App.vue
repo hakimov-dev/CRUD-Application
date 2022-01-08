@@ -25,7 +25,9 @@ export default {
   },
   methods:{
     createUser(){
-
+     fetch( 'https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json', {
+       
+     })
     }
   }
 }
