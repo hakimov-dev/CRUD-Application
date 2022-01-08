@@ -39,6 +39,10 @@ export default {
      })
 
      const firebaseData = await response.json()
+    },
+
+    loadUser(){
+      
     }
   }
 }
