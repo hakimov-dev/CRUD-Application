@@ -43,8 +43,9 @@ export default {
      this.name = ''
     },
 
-    loadUser(){
-     
+   async loadUser(){
+      const {data} = await axios.get('https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json')
+      const result = Object.keys(data)
     }
   }
 }
