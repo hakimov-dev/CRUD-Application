@@ -6,6 +6,7 @@
       :key="person.id"
       >
       <h3>{{person.firstName}}</h3>
+      <button class="btn danger">Delete</button>
       </div>
       </div>
 
