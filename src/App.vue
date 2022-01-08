@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-  <form class="card" @submit.prevent="createUser">
+  <form class="card" @submit.prevent>
    <h2>CRUD application </h2>
    <div class="form-control">
      <label for="name">Enter your name</label>
