@@ -1,13 +1,18 @@
 <template>
-  <div>
-      <div class="card" v-for="person in user" :key="person.id">
+      <div v-if="user.length !== 0">
+      <div 
+      class="card" 
+      v-for="person in user" 
+      :key="person.id"
+      >
       <h3>{{person.firstName}}</h3>
-  </div>
-    <div class="card center">
+      </div>
+      </div>
+
+    <div class="card center" v-else>
     <h4>There are no user yet</h4>
     <button @click="$emit('loadUser')" class="btn primary">Load people</button>
-  </div>
-  </div>
+    </div>
 </template>
 
 <script>
