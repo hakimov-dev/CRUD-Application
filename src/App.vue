@@ -55,7 +55,7 @@ export default {
       },
 
      async remove(id){
-       await 
+       await axios.delete(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/${id}.json`)
       }
   }
 }
