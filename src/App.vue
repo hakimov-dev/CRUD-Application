@@ -4,10 +4,10 @@
    <h2>Working with dataBase</h2>
    <div class="form-control">
      <label for="name">Enter your name</label>
-     <input type="text" id="name" placeholder="Your name">
+     <input type="text" id="name" placeholder="Your name" v-model="name">
    </div>
 
-   <button class="btn">Create user</button>
+   <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
 </div>
 </template>
@@ -25,7 +25,7 @@ export default {
   },
   methods:{
     createUser(){
-      
+
     }
   }
 }
