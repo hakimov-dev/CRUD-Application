@@ -26,7 +26,11 @@ export default {
   methods:{
     createUser(){
      fetch( 'https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json', {
-       
+       method:'POST',
+       headers:{'Content-Type': 'application/json'},
+       body: JSON.stringify({
+         firstName: this.name
+       })
      })
     }
   }
