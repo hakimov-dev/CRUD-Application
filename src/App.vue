@@ -13,11 +13,13 @@
 </template>
 
 <script>
-
+import userList from '@/components/userList.vue'
 
 export default {
   name: 'App',
-  components: {},
+  components: {
+    userList
+  },
   data() {
     return {
       name:'',
