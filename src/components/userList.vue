@@ -16,13 +16,19 @@ export default {
           
       }
   },
-  methods:{},
+  methods:{
+      load(){
+          $emits('load')
+      }
+  },
   props:{
       user:{
           type: Array,
           required: true
       }
   },
-  emits:{}
+  emits:{
+      load
+  }
 }
 </script>
