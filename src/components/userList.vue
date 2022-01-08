@@ -18,7 +18,7 @@ export default {
   },
   methods:{
       load(){
-          $emits('load')
+          $emits('loadUser')
       }
   },
   props:{
@@ -27,6 +27,6 @@ export default {
           required: true
       }
   },
-  emits:['load']
+  emits:['loadUser']
 }
 </script>

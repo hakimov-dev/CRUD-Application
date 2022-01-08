@@ -9,7 +9,7 @@
 
    <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
-  <user-list :user="user" @load="loadUser"/>
+  <user-list :user="user" @loadUser="loadUser"/>
 </div>
 </template>
 
@@ -51,7 +51,8 @@ export default {
           firstName: data[index].firstName
         }
       })
-    }
+      console.log(result)
+      }
   }
 }
 </script>
