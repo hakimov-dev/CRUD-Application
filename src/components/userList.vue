@@ -17,7 +17,12 @@ export default {
       }
   },
   methods:{},
-  props:{},
+  props:{
+      user:{
+          type: Array,
+          required: true
+      }
+  },
   emits:{}
 }
 </script>
