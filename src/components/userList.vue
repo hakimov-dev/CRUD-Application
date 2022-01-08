@@ -4,7 +4,7 @@
   </div>
     <div class="card center">
     <h4>There are no user yet</h4>
-    <button class="btn primary">Load people</button>
+    <button @click="load" class="btn primary">Load people</button>
   </div>
 </template>
 
