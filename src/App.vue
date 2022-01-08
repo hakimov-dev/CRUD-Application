@@ -40,10 +40,11 @@ export default {
      })
 
      const firebaseData = await response.json()
+     this.name = ''
     },
 
     loadUser(){
-      
+     
     }
   }
 }
