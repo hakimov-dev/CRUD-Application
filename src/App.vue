@@ -43,7 +43,7 @@ export default {
      this.name = ''
      this.user.push({
        firstName: this.name,
-       id: this.firebaseData.id
+       id: firebaseData.id
      })
     },
 
