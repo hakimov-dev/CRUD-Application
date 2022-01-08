@@ -27,8 +27,6 @@ export default {
           required: true
       }
   },
-  emits:{
-      load
-  }
+  emits:['load']
 }
 </script>
