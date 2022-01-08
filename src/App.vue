@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-  <form class="card" @submit.prevent>
+  <form class="card" @submit.prevent="createUser">
    <h2>Working with dataBase</h2>
    <div class="form-control">
      <label for="name">Enter your name</label>
@@ -23,6 +23,11 @@ export default {
       name:'',
     }
   },
+  methods:{
+    createUser(){
+      
+    }
+  }
 }
 </script>
 
