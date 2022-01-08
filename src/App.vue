@@ -28,6 +28,11 @@ export default {
       user: []
     }
   },
+
+  created(){
+    this.createUser()
+  },
+
   methods:{
     async createUser(){
     
