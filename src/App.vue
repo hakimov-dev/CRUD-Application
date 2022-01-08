@@ -9,7 +9,7 @@
 
    <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
-  <user-list :user="user"/>
+  <user-list :user="user" @load="loadUser"/>
 </div>
 </template>
 
