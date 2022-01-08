@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" :v-for="peson in user" :key="person">
       <h3></h3>
   </div>
     <div class="card center">
