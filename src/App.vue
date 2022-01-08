@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-  <form class="card">
+  <form class="card" @submit.prevent>
    <h2>Working with dataBase</h2>
    <div class="form-control">
      <label for="name">Enter your name</label>
@@ -17,7 +17,12 @@
 
 export default {
   name: 'App',
-  components: {}
+  components: {},
+  data() {
+    return {
+      name:'',
+    }
+  },
 }
 </script>
 
