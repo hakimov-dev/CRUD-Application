@@ -4,7 +4,7 @@
    <h2>Working with dataBase</h2>
    <div class="form-control">
      <label for="name">Enter your name</label>
-     <input type="text" id="name" placeholder="Your name" v-model="name">
+     <input type="text" id="name" placeholder="Your name" v-model.trim="name">
    </div>
 
    <button :disabled="name.length === 0" class="btn">Create user</button>
