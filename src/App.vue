@@ -9,7 +9,7 @@
 
    <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
-  <user-list/>
+  <user-list />
 </div>
 </template>
 
@@ -24,6 +24,7 @@ export default {
   data() {
     return {
       name:'',
+      user: []
     }
   },
   methods:{
