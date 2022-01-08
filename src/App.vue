@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <form class="card" @submit.prevent="createUser">
-   <h2>CRUD application</h2>
+   <h2>CRUD application </h2>
    <div class="form-control">
      <label for="name">Enter your name</label>
      <input type="text" id="name" placeholder="Your name" v-model.trim="name">
