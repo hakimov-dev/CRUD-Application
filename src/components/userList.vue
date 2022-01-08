@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :v-for="person in user" :key="person">
+  <div class="card" v-for="person in user" :key="person">
       <h3>{{person}}</h3>
   </div>
     <div class="card center">
@@ -14,12 +14,9 @@ export default {
   data() {
       return {}
   },
-  props:{
-      user:{
-          type: Array,
-          required: true
-      }
-  },
+  props:[ 
+      'user'
+      ],
   emits:['loadUser']
 }
 </script>
