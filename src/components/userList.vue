@@ -12,7 +12,7 @@
 
     <div class="card center" v-else>
     <h4>There are no user yet</h4>
-    <button @click="$emit('loadUser')" class="btn primary">Load people</button>
+    <button :disabled="user.length === 0" @click="$emit('loadUser')" class="btn primary">Load people</button>
     </div>
 </template>
 
