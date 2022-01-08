@@ -6,7 +6,7 @@
       :key="person.id"
       >
       <h3>{{person.firstName}}</h3>
-      <button class="btn danger" @click="$emit('remove')">Delete</button>
+      <button class="btn danger" @click="$emit('remove', person.id)">Delete</button>
       </div>
       </div>
 
