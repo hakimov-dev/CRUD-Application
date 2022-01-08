@@ -1,4 +1,15 @@
 <template>
+<div class="container">
+  <form class="card">
+   <h2>Working with dataBase</h2>
+   <div class="form-control">
+     <label for="name">Enter your name</label>
+     <input type="text" id="name" placeholder="Your name">
+   </div>
+
+   <button class="btn">Create user</button>
+  </form>
+</div>
 </template>
 
 <script>
