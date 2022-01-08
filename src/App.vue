@@ -54,8 +54,8 @@ export default {
       this.user = result
       },
 
-      remove(id){
-
+     async remove(id){
+       await 
       }
   }
 }
