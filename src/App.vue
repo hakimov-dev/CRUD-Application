@@ -51,7 +51,7 @@ export default {
           firstName: data[index].firstName
         }
       })
-      console.log(result)
+      this.user = result
       }
   }
 }
