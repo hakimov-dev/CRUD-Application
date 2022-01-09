@@ -13,7 +13,3 @@ export default {
  emits:['closeModal']
 }
 </script>
-
-<style scoped>
-
-</style>
