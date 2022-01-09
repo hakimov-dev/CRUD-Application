@@ -10,23 +10,20 @@
 
    <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
-  <Loader v-if="loading"/>
-  <user-list :user="user" v-else  @loadUser="loadUser" @remove="remove" @edit="editUser"/>
+  <user-list :user="user"  @loadUser="loadUser" @remove="remove" @edit="editUser"/>
 </div>
 </template>
 
 <script>
 import userList from '@/components/userList.vue'
 import theModal from '@/components/TheModal.vue'
-import Loader from '@/components/Loader.vue'
 import axios from 'axios'
 
 export default {
   name: 'App',
   components: {
     userList,
-    theModal,
-    Loader
+    theModal
   },
   data() {
     return {
@@ -61,10 +58,8 @@ export default {
     }
     },
 
-     loadUser(){
-     this.loading = true
-      setTimeout(async () => {
-      try{
+    async loadUser(){
+     try{
        const {data} = await axios.get('https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json') 
        
        if(data){
@@ -89,7 +84,6 @@ export default {
            type: 'danger'
          }
       }
-      }, 1200);
       },
 
      async remove(id){
