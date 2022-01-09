@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div class="container pt-1">
 <the-modal :alert="alert" @closeModal="alert = null"/>
   <form class="card" @submit.prevent="createUser">
    <h2>CRUD application </h2>
