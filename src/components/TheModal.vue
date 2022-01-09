@@ -9,7 +9,8 @@
 <script>
 export default {
   name:"TheModal",
- props:['alert']
+ props:['alert'],
+ emits:['closeModal']
 }
 </script>
 
