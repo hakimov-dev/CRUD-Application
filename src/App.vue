@@ -90,7 +90,7 @@ export default {
        try{
             await axios.delete(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/${id}.json`)
             this.user = this.user.filter(person => person.id !== id)
-            const name = 
+            const name = this.user.find(person => person.id === id).firstName
        }catch(e){
     
        }
