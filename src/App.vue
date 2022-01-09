@@ -9,7 +9,7 @@
 
    <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
-  <user-list :user="user" @loadUser="loadUser" @remove="remove(id)"/>
+  <user-list :user="user" @loadUser="loadUser" @remove="remove"/>
 </div>
 </template>
 
@@ -45,10 +45,7 @@ export default {
      })
 
      const firebaseData = await response.json()
-      this.user.push({
-       firstName: this.name,
-       id: firebaseData.id
-     })
+     
      this.name = ''
     }
     },
@@ -65,7 +62,7 @@ export default {
       },
 
      async remove(id){
-       await axios.delete(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/$.json`)
+       await axios.delete(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/${id}.json`)
        this.user = this.user.filter(person => person.id !== id)
       }
   }
