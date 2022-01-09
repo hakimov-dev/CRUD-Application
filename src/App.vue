@@ -45,7 +45,10 @@ export default {
      })
 
      const firebaseData = await response.json()
-     
+     this.user.push({
+       firstName: this.name,
+       id: firebaseData.name
+     })
      this.name = ''
     }
     },
