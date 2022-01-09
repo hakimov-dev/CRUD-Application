@@ -1,10 +1,11 @@
 <template>
     <form class="modal card" @submit.prevent="">
    <div class="form-control">
+     <h2>Edit user</h2>
      <label for="name">Edit your name</label>
      <input type="text" id="name" placeholder="Edit name" v-model.trim="name">
    </div>
 
-   <button class="btn">Edit</button>
+   <button class="btn primary">Edit</button>
   </form>
 </template>

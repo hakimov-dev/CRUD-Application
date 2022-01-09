@@ -10,14 +10,15 @@
 
    <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
-  <user-list :user="user"  @loadUser="loadUser" @remove="remove" @edit="editUser"/>
+  <edit-modal />
+  <user-list :user="user"  @loadUser="loadUser" @remove="remove" @edit="editUser"/> 
 </div>
 </template>
 
 <script>
 import userList from '@/components/userList.vue'
 import theModal from '@/components/TheModal.vue'
-import editModal from '@/component/EditModal.vue'
+import editModal from '@/components/EditModal.vue'
 import axios from 'axios'
 
 export default {
