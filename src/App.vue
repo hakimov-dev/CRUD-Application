@@ -11,7 +11,7 @@
    <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
   <edit-modal :user="person"/>
-  <user-list :user="user"  @loadUser="loadUser" @remove="remove" @edit="editUser"/> 
+  <user-list :user="user"  @loadUser="loadUser" @remove="remove" @edit="editUser" /> 
 </div>
 </template>
 
@@ -110,9 +110,10 @@ export default {
       },
       // Created by hakimov-dev; my website hakimov.netlify.app
 
-    editUser(personName){
-    // Cooming soon
-    console.log(personName);
+  async editUser(personName){
+    this.person = personName.firstName
+    await axios.put(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/${this.person}.json`)
+
     }
   }
 }
