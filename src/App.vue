@@ -10,8 +10,8 @@
 
    <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
-  <Loader />
-  <user-list :user="user" @loadUser="loadUser" @remove="remove" @edit="editUser"/>
+  <Loader v-if="loading"/>
+  <user-list :user="user" v-else  @loadUser="loadUser" @remove="remove" @edit="editUser"/>
 </div>
 </template>
 
@@ -61,7 +61,9 @@ export default {
     }
     },
 
-   async loadUser(){
+     loadUser(){
+     this.loading = true
+      setTimeout(async () => {
       try{
        const {data} = await axios.get('https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json') 
        
@@ -72,7 +74,7 @@ export default {
            type: 'primary'
                     }
                 }
-
+      this.loading = false
        const result = Object.keys(data).map( key =>{
         return {
           id: key,
@@ -80,14 +82,14 @@ export default {
         }
       })
       this.user = result
-      }catch(e){
+     }catch(e){
          this.alert = {
            title: "Error!",
            text: "The data could not be connected because the server is still empty or there is an error on the server, please. Add the first user!",
            type: 'danger'
          }
       }
-    
+      }, 1200);
       },
 
      async remove(id){
