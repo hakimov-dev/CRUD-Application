@@ -64,7 +64,7 @@ export default {
       })
       this.user = result
       }catch(e){
-         
+         alert('The server is empty. Please enter the first user.')
       }
     
       },
