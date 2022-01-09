@@ -17,13 +17,15 @@
 <script>
 import userList from '@/components/userList.vue'
 import theModal from '@/components/TheModal.vue'
+import Loader from '@/components/Loader.vue'
 import axios from 'axios'
 
 export default {
   name: 'App',
   components: {
     userList,
-    theModal
+    theModal,
+    Loader
   },
   data() {
     return {
