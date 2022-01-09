@@ -88,9 +88,9 @@ export default {
 
      async remove(id){
        try{
-            await axios.delete(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/${id}.json`)
-            this.user = this.user.filter(person => person.id !== id)
-            const name = this.user.find(person => person.id === id).firstName
+             const name = this.user.find(person => person.id === id).firstName
+             await axios.delete(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/${id}.json`)
+             this.user = this.user.filter(person => person.id !== id)
        }catch(e){
     
        }
