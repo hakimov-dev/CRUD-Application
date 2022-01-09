@@ -1,13 +1,13 @@
 <template>
 <div class="container">
-  <form class="card" @submit.prevent>
+  <form class="card" @submit.prevent="createUser">
    <h2>CRUD application </h2>
    <div class="form-control">
      <label for="name">Enter your name</label>
      <input type="text" id="name" placeholder="Your name" v-model.trim="name">
    </div>
 
-   <button :disabled="name.length === 0" class="btn" @click="createUser">Create user</button>
+   <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
   <user-list :user="user" @loadUser="loadUser" @remove="remove"/>
 </div>
