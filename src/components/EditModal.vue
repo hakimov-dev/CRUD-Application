@@ -6,7 +6,7 @@
      <input type="text" id="name" placeholder="Edit name" v-model="user">
    </div>
 
-   <button class="btn primary" @click="">Edit</button>
+   <button class="btn primary" @click="$emit('edited')">Edit</button>
   </form>
 </template>
 
