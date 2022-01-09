@@ -10,7 +10,7 @@
 
    <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
-  <edit-modal />
+  <edit-modal :user="person"/>
   <user-list :user="user"  @loadUser="loadUser" @remove="remove" @edit="editUser"/> 
 </div>
 </template>
@@ -33,7 +33,8 @@ export default {
       name:'',
       user: [],
       alert: null,
-      loading: false
+      loading: false,
+      person: ''
     }
   },
 
@@ -111,6 +112,7 @@ export default {
 
     editUser(personName){
     // Cooming soon
+    console.log(personName);
     }
   }
 }
