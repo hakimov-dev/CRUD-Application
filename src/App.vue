@@ -68,7 +68,11 @@ export default {
       })
       this.user = result
       }catch(e){
-         
+         this.alert = {
+           title: "Error!",
+           text: e.message,
+           type: 'danger'
+         }
       }
     
       },
