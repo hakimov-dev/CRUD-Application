@@ -54,13 +54,17 @@ export default {
     },
 
    async loadUser(){
-      const {data} = await axios.get('https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json')
+      try{
+       const {data} = await axios.get('https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json')
       const result = Object.keys(data).map( key =>{
         return {
           id: key,
           firstName: data[key].firstName
         }
       })
+      }catch(e){
+
+      }
       this.user = result
       },
 
