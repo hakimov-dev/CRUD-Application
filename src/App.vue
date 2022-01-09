@@ -10,7 +10,7 @@
 
    <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
-  <user-list :user="user" @loadUser="loadUser" @remove="remove" @edit=""/>
+  <user-list :user="user" @loadUser="loadUser" @remove="remove" @edit="editUser"/>
 </div>
 </template>
 
