@@ -59,8 +59,17 @@ export default {
 
    async loadUser(){
       try{
-       const {data} = await axios.get('https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json')
-      const result = Object.keys(data).map( key =>{
+       const {data} = await axios.get('https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json') 
+       
+       if(data){
+       this.alert = {
+           title: "Wonderful!",
+           text: "You can see that the data is connected correctly!",
+           type: 'primary'
+                    }
+                }
+
+       const result = Object.keys(data).map( key =>{
         return {
           id: key,
           firstName: data[key].firstName
