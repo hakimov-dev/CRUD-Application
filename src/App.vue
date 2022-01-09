@@ -35,8 +35,8 @@ export default {
 
   methods:{
     async createUser(){
-    
-    const response = await fetch( 'https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json', {
+    if(this.name !== ''){
+       const response = await fetch( 'https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json', {
        method:'POST',
        headers:{'Content-Type': 'application/json'},
        body: JSON.stringify({
@@ -50,6 +50,7 @@ export default {
        id: firebaseData.id
      })
      this.name = ''
+    }
     },
 
    async loadUser(){
@@ -64,7 +65,7 @@ export default {
       },
 
      async remove(id){
-       await axios.delete(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/${id}.json`)
+       await axios.delete(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/$.json`)
        this.user = this.user.filter(person => person.id !== id)
       }
   }
