@@ -8,7 +8,8 @@
 
 <script>
 export default {
-  name:"TheModal"
+  name:"TheModal",
+ props:['alert']
 }
 </script>
 
