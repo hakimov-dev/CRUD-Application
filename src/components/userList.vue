@@ -39,4 +39,5 @@ export default {
  align-items:center;
  justify-content: space-between;    
 }
+   /* // Created by hakimov-dev; my website hakimov.netlify.app */
 </style>

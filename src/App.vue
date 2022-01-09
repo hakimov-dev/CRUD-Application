@@ -104,6 +104,7 @@ export default {
             }
        }
       }
+      // Created by hakimov-dev; my website hakimov.netlify.app
   }
 }
 </script>
