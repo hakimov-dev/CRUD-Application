@@ -97,7 +97,11 @@ export default {
               type:'primary'
             }
        }catch(e){
-       
+           this.alert = {
+              title:'Eror!',
+              text: `Somthing error could not be deleted! Please try again.`,
+              type:'primary'
+            }
        }
       }
   }
