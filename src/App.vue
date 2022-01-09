@@ -33,7 +33,7 @@ export default {
       name:'',
       user: [],
       alert: null,
-      loading: false,
+      editContent: false,
       person: ''
     }
   },
