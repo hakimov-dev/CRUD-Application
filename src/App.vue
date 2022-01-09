@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-<the-modal :alert="alert" @closeModal=""/>
+<the-modal :alert="alert" @closeModal="alert = null"/>
   <form class="card" @submit.prevent="createUser">
    <h2>CRUD application </h2>
    <div class="form-control">
