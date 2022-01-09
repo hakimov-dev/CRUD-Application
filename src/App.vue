@@ -103,11 +103,11 @@ export default {
               type:'primary'
             }
        }
-      }
+      },
       // Created by hakimov-dev; my website hakimov.netlify.app
 
     editUser(personName){
-      
+    
     }
   }
 }
