@@ -28,7 +28,8 @@ export default {
   data() {
     return {
       name:'',
-      user: []
+      user: [],
+      alert: null
     }
   },
 
