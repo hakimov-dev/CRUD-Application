@@ -31,7 +31,8 @@ export default {
     return {
       name:'',
       user: [],
-      alert: null
+      alert: null,
+      loading: false
     }
   },
 
