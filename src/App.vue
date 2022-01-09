@@ -62,10 +62,11 @@ export default {
           firstName: data[key].firstName
         }
       })
-      }catch(e){
-
-      }
       this.user = result
+      }catch(e){
+         
+      }
+    
       },
 
      async remove(id){
