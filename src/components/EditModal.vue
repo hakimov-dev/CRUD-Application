@@ -13,6 +13,6 @@
 <script>
 export default {
     name:"EditModal",
-    props:['user']
+    props:['user'],
 }
 </script>
