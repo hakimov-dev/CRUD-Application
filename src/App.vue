@@ -79,7 +79,7 @@ export default {
       }catch(e){
          this.alert = {
            title: "Error!",
-           text: e.message,
+           text: "The data could not be connected because the server is still empty or there is an error on the server, please. Add the first user!",
            type: 'danger'
          }
       }
