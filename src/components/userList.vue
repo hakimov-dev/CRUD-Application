@@ -7,7 +7,7 @@
       >
       <h3>{{person.firstName}}</h3>
       <div>
-      <button class="btn warning">Edit</button>
+      <button class="btn warning" @click="$emit('edit', person)">Edit</button>
       <button class="btn danger" @click="$emit('remove', person.id)">Delete</button>
       </div>
       </div>
@@ -28,7 +28,7 @@ export default {
   props:[ 
       'user'
       ],
-  emits:['loadUser', 'remove']
+  emits:['loadUser', 'remove', 'edit']
 }
 </script>
 
