@@ -91,8 +91,13 @@ export default {
              const name = this.user.find(person => person.id === id).firstName
              await axios.delete(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/${id}.json`)
              this.user = this.user.filter(person => person.id !== id)
+              this.alert = {
+              title:'Success!',
+              text: `User named "${name}" has been deleted!`,
+              type:'primary'
+            }
        }catch(e){
-    
+       
        }
       }
   }
