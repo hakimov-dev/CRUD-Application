@@ -1,6 +1,6 @@
 <template>
-  <div class="card center">
-    
+  <div class="alert">
+     
   </div>
 </template>
 
