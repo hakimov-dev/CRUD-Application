@@ -10,7 +10,7 @@
 
    <button :disabled="name.length === 0" class="btn">Create user</button>
   </form>
-  <edit-modal :user="person" @edited="editUser"/>
+  <edit-modal v-if="editContent" :user="person" @edited="editUser"/>
   <user-list :user="user"  @loadUser="loadUser" @remove="remove" @edit="editUser" /> 
 </div>
 </template>
