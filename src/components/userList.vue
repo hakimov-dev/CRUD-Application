@@ -4,6 +4,7 @@
       class="card flex" 
       v-for="person in user" 
       :key="person.id"
+      :id="person.id"
       >
       <h3>{{person.firstName}}</h3>
       <div>
