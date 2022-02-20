@@ -111,6 +111,7 @@ export default {
       // Created by hakimov-dev; my website hakimov.netlify.app
 
   async editUser(id){
+    this.editContent = !this.editContent
     const person = this.user.find(person1 => person1.id === id).firstName
     await axios.put(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/${id}.json`)
     this.person == this.person
