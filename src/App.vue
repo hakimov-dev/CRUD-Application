@@ -65,7 +65,7 @@ export default {
 
     async loadUser(){
      try{
-       const {data} = await axios.get('https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json') 
+       const {data} = await axios.get('https://crud-project-db19b-default-rtdb.firebaseio.com/users.json') 
        
        if(data){
        this.alert = {
@@ -94,7 +94,7 @@ export default {
      async remove(id){
        try{
              const name = this.user.find(person => person.id === id).firstName
-             await axios.delete(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/${id}.json`)
+             await axios.delete(`https://crud-project-db19b-default-rtdb.firebaseio.com/users/${id}.json`)
              this.user = this.user.filter(person => person.id !== id)
               this.alert = {
               title:'Success!',
@@ -114,7 +114,7 @@ export default {
    editUser(id){
     this.editContent = !this.editContent
     const name = this.user.find(person => person.id === id).firstName
-    axios.put(`https://crudd-app-hakimov-default-rtdb.firebaseio.com/users/${id}.json`)
+    axios.put(`https://crud-project-db19b-default-rtdb.firebaseio.com/users/${id}.json`)
     name = this.editedUser
     console.table(name)
     }
