@@ -1,18 +1,18 @@
 <template>
-    <form class="modal card" @submit.prevent="">
-   <div class="form-control">
-     <h2>Edit user</h2>
-     <label for="name">Edit your name</label>
-     <input type="text" id="name" placeholder="Edit name" v-model="user">
-   </div>
+  <form class="modal card" @submit.prevent="">
+    <div class="form-control">
+      <h2>Edit user</h2>
+      <label for="name">Edit your name</label>
+      <input type="text" id="name" placeholder="Edit name" v-model="user" />
+    </div>
 
-   <button class="btn primary" @click="$emit('edited')">Edit</button>
+    <button class="btn primary" @click="$emit('edited')">Edit</button>
   </form>
 </template>
 
 <script>
 export default {
-    name:"EditModal",
-    props:['user'],
-}
+  name: "EditModal",
+  props: ["user"],
+};
 </script>
