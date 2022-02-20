@@ -57,7 +57,7 @@ export default {
     async createUser() {
       if (this.name !== "") {
         const response = await fetch(
-          "https://crudd-app-hakimov-default-rtdb.firebaseio.com/users.json",
+          "https://crudd-app-hakimov-default-rtdb.firebaseio.com/.json",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -72,6 +72,7 @@ export default {
           firstName: this.name,
           id: firebaseData.name,
         });
+        console.log(firebaseData)
         this.name = "";
       }
     },
@@ -79,7 +80,7 @@ export default {
     async loadUser() {
       try {
         const { data } = await axios.get(
-          "https://crud-project-db19b-default-rtdb.firebaseio.com/users.json"
+          "https://crud-project-db19b-default-rtdb.firebaseio.com/.json"
         );
 
         if (data) {
