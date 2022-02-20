@@ -34,7 +34,8 @@ export default {
       user: [],
       alert: null,
       editContent: false,
-      person: ''
+      person: '',
+      editedUser: ''
     }
   },
 
